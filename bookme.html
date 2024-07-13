@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f4e1;
+            color: white;
+        }
+
+        nav {
+            padding: 5px;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: white;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: 100%;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(0, 0, 0);
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 80px auto; /* Adjust margin to ensure form is below navbar */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: black;
+        }
+
+        input,
+        select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .card {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+/* Medium devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .services .service {
+    width: 45%;
+  }
+}
+
+/* Small devices (Landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .search-container {
+    width: 95%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .services .service {
+    width: 100%;
+  }
+
+  .offer-section {
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+
+/* Very small devices (Older or smaller smartphones, less than 360px) */
+@media (max-width: 360px) {
+  .search-container {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .services .service {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .services .service h3 {
+    font-size: 1.2em;
+  }
+
+  .services .service p {
+    font-size: 0.9em;
+  }
+
+  .footer-section ul li {
+    margin: 3px 0;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9em;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="plan.html">Plan Your Trip</a></li>
+                <li><a href="bookme.html">Book Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Book Me</h2>
+        <form action="/submit" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="">Select Location</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Karachi">karachi</option>
+
+            </select>
+
+            <label for="carType">Car Type:</label>
+            <select id="carType" name="carType" required>
+                <option value="">Select Car Type</option>
+                <option value="2D">2D</option>
+                <option value="Flying Coach">Flying Coach</option>
+                <option value="hindukush">Hindukush</option>
+                <option value="Coaster">Coaster</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

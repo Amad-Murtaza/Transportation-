@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your trip</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f8f4e1;
+            color: white;
+        }
+
+        nav {
+          padding: 5px;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: white;
+            height: 60px;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        nav ul li a:hover {
+            color: #9babb3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: rgb(7, 25, 26);
+            border-radius: 100px;
+            padding: 20px;
+            margin: 30px;
+        }
+        a{
+            outline: none;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        a:hover{
+            color: #9babb3;
+        }
+        @media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .card {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+/* Medium devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .services .service {
+    width: 45%;
+  }
+}
+
+/* Small devices (Landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .search-container {
+    width: 95%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .services .service {
+    width: 100%;
+  }
+
+  .offer-section {
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+
+/* Very small devices (Older or smaller smartphones, less than 360px) */
+@media (max-width: 360px) {
+  .search-container {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .services .service {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .services .service h3 {
+    font-size: 1.2em;
+  }
+
+  .services .service p {
+    font-size: 0.9em;
+  }
+
+  .footer-section ul li {
+    margin: 3px 0;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9em;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="plan.html">Plan Your Trip</a></li>
+                    <li><a href="bookme.html">Book Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1>Plan Your Trip With Trevwithus for better Experience</h1>
+    <div class="card-container">
+        <div class="card">
+            <h2 style="color: black;">Chitral To Peshawar</h2>
+            <p>Car Type: Flying Coach</p>
+            <p>Price: 1800</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Peshawar</h2>
+            <p>Car Type: 2D</p>
+            <p>Price: 3500</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Peshawar</h2>
+            <p>Car Type: Hindukush</p>
+            <p>Price: 2500</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Islamabad</h2>
+            <p>Car type: Hindukush</p>
+            <p>Price: 3000</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Islamabad</h2>
+            <p>Car type: 2D</p>
+            <p>Price: 3000</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Islamabad</h2>
+            <p>Car type: Coaster</p>
+            <p>Price: 3000</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Timalgera</h2>
+            <p>Car type: Ghogay</p>
+            <p>Price: 1500</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Timalgera</h2>
+            <p>Car type: Fielder</p>
+            <p>Price: 1500</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+        <div class="card">
+            <h2 style="color: black;">Chitral To Timalgera</h2>
+            <p>Car type: Coaster</p>
+            <p>Price: 1500</p>
+            <button><a href="bookme.html">Book Now</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

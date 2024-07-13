@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f4e1;
+            color: white;
+        }
+
+        nav {
+            padding: 5px;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: white;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: 100%;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(0, 0, 0);
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(7, 25, 26);
+            border-radius: 100px;
+            padding: 20px;
+            margin: 30px;
+        
+        }
+        h2{
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            color: black;
+            
+        }p{
+            margin: 50px;
+            color: black;
+        }
+        @media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .card {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+/* Medium devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .services .service {
+    width: 45%;
+  }
+}
+
+/* Small devices (Landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .search-container {
+    width: 95%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .services .service {
+    width: 100%;
+  }
+
+  .offer-section {
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+  }
+
+  .offer-section h2 {
+    font-size: 1.8em;
+  }
+
+  .offer-section p {
+    font-size: 1em;
+  }
+}
+
+/* Very small devices (Older or smaller smartphones, less than 360px) */
+@media (max-width: 360px) {
+  .search-container {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .services .service {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .services .service h3 {
+    font-size: 1.2em;
+  }
+
+  .services .service p {
+    font-size: 0.9em;
+  }
+
+  .footer-section ul li {
+    margin: 3px 0;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9em;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="right">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="plan.html">Plan Your Trip</a></li>
+              <li><a href="bookme.html">Book Me</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <div>
+            <h1>FAQ</h1>
+        </div>
+      </section>
+      <hr/>
+      <main>
+        <div class="container">
+      <h2><b>What service to we offer?</b></h2>
+        <p>We offer transportation service all over the district. Our service include reliable and efficient freight transport, ensureing your goods are delivered safely and on time across various distance. We specialize in both local and long haul trucking, supported by fleet of modern vehicles and experienced drivers. Witha commitment to excellence and coustomer satisfiction, Trevwithus is your trusted partner for all transportation needs.  </p>
+    </div>  
+    <hr/>
+    <div>
+        <h2>How do i book a trip?</h2>
+        <p>. First select your distination where you want to go </br>
+        . Select your choice of car </br>
+        . Select Prize. </br>
+        .Book you trip.
+    </p>
+    <hr/>
+    <h2>Can I book online?</h2>
+    <p>Trevwithuss provide you online booking through Email address, Easypaisa, Jazzcassh. Our aim is to take the transporation service to the next level.</p>
+     <hr/> 
+     <h2>Can i make a booking over the phone?</h2>
+     <p>You can also book through your phone. You can contact us through our Whatsapp number(03239167702).</p> 
+</div>
+    </main>
+    </body>
+</html>
